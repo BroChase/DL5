@@ -230,9 +230,9 @@ class lstm:
         def update_status(inputs, h_prev, C_prev):
             # initialized later
 
-            # Get predictions for 200 letters with current model
+            # Get predictions for 200 words with current model
 
-            sample_idx = generate_next_char(h_prev, C_prev, inputs[0], 200)
+            sample_idx = generate_next_char(h_prev, C_prev, inputs[0], 25)
             txt = ' '.join(idx_to_char[idx] for idx in sample_idx)
 
             # Clear and plot

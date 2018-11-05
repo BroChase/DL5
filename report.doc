@@ -1,0 +1,89 @@
+Parsed 20239 sentences.
+Found 15555 unique word tokens.
+Using vocabulary size 5000.
+The least frequent word in our vocabulary is 'recovering' and appeared 5 times.
+rnnVanilla with 100 Hidden Units & sequence length of 25:
+Expected Loss for random predictions: 8.517193
+Actual loss: 8.517837
+rnnVanilla 100 Hidden Units
+Example text
+x:
+SENTENCE_START phileas fogg had already determined this question .
+Resulting outputs from training
+epoch 20 : `` was not UNKNOWN in UNKNOWN UNKNOWN . SENTENCE_END
+Resulting outputs from training
+epoch 40 : `` was not UNKNOWN in UNKNOWN UNKNOWN . SENTENCE_END
+Resulting outputs from training
+epoch 60 : `` , not UNKNOWN in UNKNOWN UNKNOWN . SENTENCE_END
+Resulting outputs from training
+epoch 80 : `` , was UNKNOWN , UNKNOWN . . SENTENCE_END
+Resulting outputs from training
+epoch 100 : `` , was UNKNOWN , UNKNOWN . . SENTENCE_END
+rnnVanilla with 50 Hidden Units & sequence length of 25:
+Expected Loss for random predictions: 8.517193
+Actual loss: 8.516967
+rnnVanilla 50 Hidden Units
+Example text
+x:
+SENTENCE_START phileas fogg had already determined this question .
+Resulting outputs from training
+epoch 20 : `` was , UNKNOWN UNKNOWN UNKNOWN UNKNOWN . SENTENCE_END
+Resulting outputs from training
+epoch 40 : `` UNKNOWN was UNKNOWN in UNKNOWN UNKNOWN . SENTENCE_END
+Resulting outputs from training
+epoch 60 : `` , was , in UNKNOWN UNKNOWN . SENTENCE_END
+Resulting outputs from training
+epoch 80 : `` , was , , UNKNOWN UNKNOWN . SENTENCE_END
+Resulting outputs from training
+epoch 100 : `` UNKNOWN was , in of UNKNOWN . SENTENCE_END
+rnnVanilla with 200 Hidden Units & sequence length of 25:
+Expected Loss for random predictions: 8.517193
+Actual loss: 8.517173
+rnnVanilla 200 Hidden Units
+Example text
+x:
+SENTENCE_START phileas fogg had already determined this question .
+Resulting outputs from training
+epoch 20 : `` was not UNKNOWN in UNKNOWN UNKNOWN . SENTENCE_END
+Resulting outputs from training
+epoch 40 : `` was a UNKNOWN in our . . SENTENCE_END
+Resulting outputs from training
+epoch 60 : `` , , UNKNOWN gutenberg-tm our UNKNOWN . SENTENCE_END
+Resulting outputs from training
+epoch 80 : `` , , UNKNOWN to our . . SENTENCE_END
+Resulting outputs from training
+epoch 100 : `` , , UNKNOWN to our . . SENTENCE_END
+rnnVanilla with 100 Hidden Units & sequence length of 12:
+Expected Loss for random predictions: 8.517193
+Actual loss: 8.518138
+rnnVanilla Half Sequence
+Example text
+x:
+SENTENCE_START `` absolutely .
+Resulting outputs from training
+epoch 20 : `` no ! SENTENCE_END
+Resulting outputs from training
+epoch 40 : i no ! SENTENCE_END
+Resulting outputs from training
+epoch 60 : i no ! SENTENCE_END
+Resulting outputs from training
+epoch 80 : i no ! SENTENCE_END
+Resulting outputs from training
+epoch 100 : i no ! SENTENCE_END
+rnnVanilla with 100 Hidden Units & sequence length of 50:
+Expected Loss for random predictions: 8.517193
+Actual loss: 8.517468
+rnnVanilla Double Sequence
+Example text
+x:
+SENTENCE_START the poles would add nothing , and are only used when we are going into port . ''
+Resulting outputs from training
+epoch 20 : `` uncle of the the , and the , not , the of of the . . SENTENCE_END SENTENCE_END
+Resulting outputs from training
+epoch 40 : `` UNKNOWN of UNKNOWN the , and i had not , the UNKNOWN of the UNKNOWN . SENTENCE_END SENTENCE_END
+Resulting outputs from training
+epoch 60 : `` colonists of UNKNOWN the , and UNKNOWN had not , the have the a UNKNOWN . SENTENCE_END SENTENCE_END
+Resulting outputs from training
+epoch 80 : `` UNKNOWN of the the to and i were UNKNOWN , the fogg UNKNOWN . UNKNOWN . SENTENCE_END SENTENCE_END
+Resulting outputs from training
+epoch 100 : `` UNKNOWN was the a , and i were UNKNOWN , the fogg UNKNOWN . UNKNOWN . SENTENCE_END SENTENCE_END

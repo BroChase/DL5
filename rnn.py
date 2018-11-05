@@ -211,7 +211,16 @@ def lossvsepoch(epoch, loss, title):
 
 def runit(f, XTrain, yTrain, index_to_char, title, gphtitle, hiddendunits):
     # Train
+    np.random.seed(10)
+    # grad_check_vocab_size = 100
+    # model = RNNVanilla(grad_check_vocab_size, hidden_dim=hiddendunits)
     model = RNNVanilla(len(index_to_char), hidden_dim=hiddendunits)
+    # model.gradient_check([31, 40, 20, 43], [40, 20, 43, 50], f)
+
+    print("Expected Loss for random predictions: %f" % np.log(len(index_to_char)))
+    print("Actual loss: %f" % model.calculate_loss(XTrain, yTrain))
+    f.write("Expected Loss for random predictions: %f\n" % np.log(len(index_to_char)))
+    f.write("Actual loss: %f\n" % model.calculate_loss(XTrain, yTrain))
     losses, strings = train_with_sgd(model, XTrain, yTrain, index_to_char, learning_rate=0.005,
                                          nepoch=101, evaluate_loss_after=1)
 
