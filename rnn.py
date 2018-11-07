@@ -98,7 +98,7 @@ class RNNVanilla:
                 delta_t = self.W.T.dot(delta_t) * (1 - s[bptt_step - 1] ** 2)
         return [dLdU, dLdV, dLdW]
 
-    def gradient_check(self, x, y, f, h=0.001, error_threshold=0.01):
+    def gradient_check(self, x, y, f, h=0.001, error_threshold=0.1):
         # Calculate the gradients using backpropagation. We want to checker if these are correct.
         bptt_gradients = self.bptt(x, y)
 
@@ -128,8 +128,11 @@ class RNNVanilla:
                 # The gradient for this parameter calculated using backpropagation
                 backprop_gradient = bptt_gradients[pidx][ix]
                 # calculate The relative error: (|x - y|/(|x| + |y|))
+
                 relative_error = np.abs(backprop_gradient - estimated_gradient) / (
                             np.abs(backprop_gradient) + np.abs(estimated_gradient))
+                if np.isnan(relative_error):
+                    relative_error = 0
                 # If the error is to large fail the gradient check
                 if relative_error > error_threshold:
                     print("Gradient Check ERROR: parameter=%s ix=%s" % (pname, ix))
